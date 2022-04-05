@@ -1,3 +1,5 @@
+# CHANGE NAME IN LINE 19 !!!!
+
 # Split path
 $Path = Split-Path -Parent "C:\scripts\*.*"
 
@@ -14,7 +16,7 @@ Import-Module ActiveDirectory
 # Set distinguishedName as searchbase, you can use one OU or multiple OUs
 # Or use the root domain like DC=exoip,DC=local
 $DNs = @(
-    "OU=Riley,DC=rileytech2,DC=local"
+    "OU=NAME,DC=NAME,DC=local"
 )
 
 # Create empty array
