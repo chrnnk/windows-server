@@ -1,0 +1,2 @@
+PsExec.exe /accepteula \\10.62.10.179 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+PsExec.exe /accepteula \\10.62.10.179 netsh firewall set service RemoteDesktop enable
