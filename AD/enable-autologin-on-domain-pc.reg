@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"LastUsedUsername"="Administrator"
+"AutoAdminLogon"="1"
+"DefaultUserName"="Administrator"
+"DefaultPassword"="plaintext-password"
+"DefaultDomainName"="DOMAIN.local"
+"DontDisplayLastUserName"="1"
