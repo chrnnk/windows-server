@@ -1,5 +1,5 @@
 # repadmin /syncall dst-dc01 dc=contoso,dc=com /d /e /a
-repadmin /syncall DC1 /d /e /P /a DomainNamingMaster
+repadmin /syncall DC1 /d /e /P /a
 
 <#
 repadmin /syncall <DSA> [<Naming Context>] [<flags>]
