@@ -5,6 +5,7 @@ repadmin /syncall DC1 /d /e /P /a DomainNamingMaster
 repadmin /syncall <DSA> [<Naming Context>] [<flags>]
 
 DSA - Specifies the host name of a domain controller.
+
 <Naming Context> - Specifies the distinguished name of the directory partition.
 
 /d Identifies servers by distinguished name in messages.
