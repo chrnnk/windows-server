@@ -13,7 +13,7 @@ Export-DhcpServer -File C:\DHCPdata.xml -Leases -Force -ComputerName old.network
 # 6.Type in the following command on Powershell to import the DHCP Data.
 
 Import-DhcpServer -File C:\DHCPdata.xml -BackupPath C:\DHCP\ -Leases -ScopeOverwrite -Force -ComputerName new.network.local –Verbose
-
+# !! Verbose switch failed on me recently, but removed -Verbose and it worked perfect
 # 7.Restart the DHCP service.
 
 # Verify your DHCP scope, IP leases, reservations etc and they should match with DHCP Server 2012 R2.
