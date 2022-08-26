@@ -3,7 +3,7 @@ Source - https://github.com/directorcia/Office365/blob/master/best-practices.txt
 
 Email
 -----
-Mail flow best practices for Exchange Online and Office 365 - https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/mail-flow-best-practices
+Mail flow best practices for Exchange Online and Office 365 - https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/mail-flow-best-practices</br>
 Best practices for configuring mail flow rules in Exchange Online - https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/configuration-best-practices
 Best practices for configuring standalone EOP - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/best-practices-for-configuring-eop?view=o365-worldwide
 Recommended settings for EOP and Defender for Office 365 security - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp?view=o365-worldwide
