@@ -1,5 +1,4 @@
-Creator - www.ciaops.com
-
+Creator of this list - www.ciaops.com
 ### Email
 -----
 Mail flow best practices for Exchange Online and Office 365 - https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/mail-flow-best-practices</br>
