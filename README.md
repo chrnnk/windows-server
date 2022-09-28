@@ -1,6 +1,10 @@
 ## Commonly used commandlets
 ```
 Repadmin /replsummary
+Repadmin /Showrepl
+Repadmin /Queue
+Repadmin /syncall
+dfsrmig /getmigrationstate
 ```
 
 ## Best Practices
