@@ -1,3 +1,8 @@
+## Commonly used commandlets
+```
+Repadmin /replsummary
+```
+
 ## Best Practices
 ### Email
 -----
