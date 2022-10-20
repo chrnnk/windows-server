@@ -1,5 +1,6 @@
 ## Commonly used commandlets
 ```
+Test-NetConnection IPADDRESS -port 636
 Repadmin /replsummary
 Repadmin /Showrepl
 Repadmin /Queue
