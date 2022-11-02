@@ -1,6 +1,8 @@
 ## Commonly used commandlets
 ```
 Test-NetConnection IPADDRESS -port 636
+Test-NetConnection -ConstrainInterface 3 10.50.4.10 -DiagnoseRouting
+Get-NetIPInterface
 Repadmin /replsummary
 Repadmin /Showrepl
 Repadmin /Queue
