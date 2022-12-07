@@ -1,0 +1,3 @@
+Install-Module ExchangeOnlineManagement
+Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline
