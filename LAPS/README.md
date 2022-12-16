@@ -6,7 +6,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=46899
 
 Run the file as Administrator and install all components.
 
-Extend the Active Directory schema by running the below two PowerShell commands:
+Extend the Active Directory schema by opening PowerShell as an Administrator, while logged in as a member of Schema Admins. Then run the below two PowerShell commands:
 ```
 Import-Module AdmPwd.PS
 Update-AdmPwdADSchema
