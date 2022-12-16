@@ -1,10 +1,8 @@
-How to setup and deploy LAPS (Local Administrator Password Solution) guide
-
-Download laps and copy the file to the desktop of your domain controller.
+From a Domain Controller, download LAPS installer and run the file as Administrator and install all components.
 
 https://www.microsoft.com/en-us/download/details.aspx?id=46899
 
-Run the file as Administrator and install all components.
+Reboot the DC.
 
 Extend the Active Directory schema by opening PowerShell as an Administrator, while logged in as a member of Schema Admins. Then run the below two PowerShell commands:
 ```
