@@ -1,12 +1,16 @@
 From a Domain Controller, download LAPS installer and run the file as Administrator and install all components.
+
 https://www.microsoft.com/en-us/download/details.aspx?id=46899
+
 Reboot the DC.
+
 Extend the Active Directory schema by opening PowerShell as an Administrator, while logged in as a member of Schema Admins. Then run the below two PowerShell commands:
 ```
 Import-Module AdmPwd.PS
 Update-AdmPwdADSchema
 ```
 After the schema has been updated, your Active Directory computer objects should have two new attributes. ms-Mcs-AdmPwd and ms-Mcs-AdmPwdExpirationTime.
+
 We need to give the computer units permission to be able to update these two new attributes. This is done by running the below command:
 ```
 Set-AdmPwdComputerSelfPermission -OrgUnit Workstations
