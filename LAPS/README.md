@@ -13,7 +13,10 @@ After the schema has been updated, your Active Directory computer objects should
 
 We need to give the computer units permission to be able to update these two new attributes. This is done by running the below command:
 ```
-Set-AdmPwdComputerSelfPermission -OrgUnit Workstations
+Set-AdmPwdComputerSelfPermission -OrgUnit "OU=Servers,OU=OUNAME,DC=DCNAME,DC=local"
+Set-AdmPwdComputerSelfPermission -OrgUnit "OU=Computers,OU=OUNAME,DC=DCNAME,DC=local"
+Set-AdmPwdComputerSelfPermission -OrgUnit "OU=Test,OU=Computers,OU=OUNAME,DC=DCNAME,DC=local"
+Set-AdmPwdComputerSelfPermission -OrgUnit "OU=Virtual Machines,OU=Computers,OU=OUNAME,DC=DCNAME,DC=local"
 ```
 We now need to give certain users the ability to access these new administrator passwords that will be stored in AD. To do this, create a new security group called "LAPS Admins" and then run the below command to give the new security group the permissions. Any users in this new security group will be able to view the computer administrator passwords.
 ```
