@@ -1,25 +1,20 @@
 From a Domain Controller, download LAPS installer and run the file as Administrator and install all components.
-
 https://www.microsoft.com/en-us/download/details.aspx?id=46899
-
 Reboot the DC.
-
 Extend the Active Directory schema by opening PowerShell as an Administrator, while logged in as a member of Schema Admins. Then run the below two PowerShell commands:
 ```
 Import-Module AdmPwd.PS
 Update-AdmPwdADSchema
 ```
-After the schema has been updated, your Active Directory computer objects should have two new attributes. ms-Mcs-AdmPwd and ms-Mcs-AdmPwdExpirationTime
-
+After the schema has been updated, your Active Directory computer objects should have two new attributes. ms-Mcs-AdmPwd and ms-Mcs-AdmPwdExpirationTime.
 We need to give the computer units permission to be able to update these two new attributes. This is done by running the below command:
-
 ```
 Set-AdmPwdComputerSelfPermission -OrgUnit Workstations
 ```
-Note: change the OrgUnit switch value to the name of the organisational unit which houses your computer units.
-
-We now need to give certain users the ability to access these new administrator passwords that will be stored in AD. To do this, create a new security group called LAPSAdmins and then run the below command to give the new security group the permissions. Any users in this new security group will be able to view the computer administrator passwords.
+We now need to give certain users the ability to access these new administrator passwords that will be stored in AD. To do this, create a new security group called "LAPS Admins" and then run the below command to give the new security group the permissions. Any users in this new security group will be able to view the computer administrator passwords.
+```
 Set-AdmPwdReadPasswordPermission -Identity Workstations -AllowedPrincipals "LAPSAdmins"
+```
 Now we need to use group policy to deploy the LAPS application to all computers, and copy the LAPS application to a file share which all computers can access.
 
 Using file explorer, navigate to \\LOCALDOMAINNAME\SYSVOL\LOCALDOMAINNAME\scripts and create a new folder called LAPS
