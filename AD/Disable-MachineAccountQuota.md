@@ -1,9 +1,8 @@
-Active Directory: How to Prevent Authenticated Users from Joining Workstations to a Domain
+## Active Directory: How to Prevent Authenticated Users from Joining Workstations to a Domain
 
+## Administrator can control it with two ways
 
-Administrator can control it with two ways
-
-1. By Modifying ms-DS-MachineAccountQuota attribute
+### 1. By Modifying ms-DS-MachineAccountQuota attribute
 
 Open Active Directory Services Interface Console (ADSI Edit) ( Start > Run > adsiedit.msc)
 
@@ -20,7 +19,7 @@ Click Edit ms-DS-MachineAccountQuota and set to 0, Click OK to exit.
 Note:
 That users in the Administrators or Domain Administrators groups, and those users who have delegated permissions on containers in Active Directory to create and delete computer accounts, are not restricted by this limitation.
 
-2. By Default Domain Controllers Policy
+### 2. By Default Domain Controllers Policy
 
 Open Group Policy Management Console ( Start > Run > gpmc.msc).
 
