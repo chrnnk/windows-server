@@ -20,11 +20,14 @@ Set-AdmPwdComputerSelfPermission -OrgUnit "OU=Virtual Machines,OU=Computers,OU=O
 ```
 We now need to give certain users the ability to access these new administrator passwords that will be stored in AD. To do this, create a new security group called "LAPS Admins" and then run the below command to give the new security group the permissions. Any users in this new security group will be able to view the computer administrator passwords.
 ```
-Set-AdmPwdReadPasswordPermission -Identity Workstations -AllowedPrincipals "LAPSAdmins"
+Set-AdmPwdReadPasswordPermission -OrgUnit "OU=Servers,OU=OUNAME,DC=DCNAME,DC=local" -AllowedPrincipals "LAPSAdmins"
+Set-AdmPwdReadPasswordPermission -OrgUnit "OU=Computers,OU=OUNAME,DC=DCNAME,DC=local" -AllowedPrincipals "LAPSAdmins"
+Set-AdmPwdReadPasswordPermission -OrgUnit "OU=Test,OU=Computers,OU=OUNAME,DC=DCNAME,DC=local" -AllowedPrincipals "LAPSAdmins"
+Set-AdmPwdReadPasswordPermission -OrgUnit "OU=Virtual Machines,OU=Computers,OU=OUNAME,DC=DCNAME,DC=local" -AllowedPrincipals "LAPSAdmins"
 ```
 Now we need to use group policy to deploy the LAPS application to all computers, and copy the LAPS application to a file share which all computers can access.
 
-Using file explorer, navigate to \\LOCALDOMAINNAME\SYSVOL\LOCALDOMAINNAME\scripts and create a new folder called LAPS
+Using file explorer, navigate to \\LOCALDOMAINNAME\SYSVOL\LOCALDOMAINNAME\scripts and create a new folder called LAPS. Or put this installer in a shared folder where Authenticated Users and Domain Computers have read and execute permissions.
 
 Copy the LAPS application into the newly created LAPS folder.
 
@@ -43,7 +46,7 @@ Under Computer Configuration > Policies > Administrative Template > LAPS, config
 Enable local admin password management
 Password Settings
 Do not allow password expiration time longer than required
-Name of administrator account to manage (This setting is not required to be configured unless you have renamed the default administrator account name)
+Name of administrator account to manage (This setting is not required to be configured unless you arenot using the default administrator account)
 Close the Group Policy Management Editor.
 
 Link the new LAPS group policy object to your Workstations OU.
