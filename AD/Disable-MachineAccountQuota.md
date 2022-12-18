@@ -1,6 +1,6 @@
 ## Active Directory: How to Prevent Authenticated Users from Joining Workstations to a Domain
 
-## Administrator can control it with two ways
+Administrator can control it with two ways
 
 ### 1. By Modifying ms-DS-MachineAccountQuota attribute
 
