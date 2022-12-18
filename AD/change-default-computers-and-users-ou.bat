@@ -1,2 +1,4 @@
-C:\windows\system32\redircmp "OU=Computers,OU=Production,DC=DOMAIN,DC=LOCAL"
-c:\windows\system32\redirusr "OU=Users,OU=Production,DC=DOMAIN,DC=LOCAL"
+Get-ADDomain | select computerscont*
+redircmp "OU=Computers,OU=Production,DC=DOMAIN,DC=LOCAL"
+Get-ADDomain | select userscont*
+redirusr "OU=Users,OU=Production,DC=DOMAIN,DC=LOCAL"
