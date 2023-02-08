@@ -22,7 +22,7 @@ foreach ($User in $Users) {
     $ADUser = Get-ADUser -Filter "UserPrincipalName -eq '$UPN'" | Select-Object SamAccountName
 
     # User from CSV not in AD
-    if ($ADUser -eq $null) {
+    if ($null -eq $ADUser) {
         Write-Host "$UPN does not exist in AD" -ForegroundColor Red
     }
     else {
