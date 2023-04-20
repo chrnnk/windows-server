@@ -1,0 +1,1 @@
+Get-MsolUser -all | Where-Object {$_.BlockCredential -eq $false} | Select-Object DisplayName,UserPrincipalName,@{N="MFA User Setup"; E={ if( $_.StrongAuthenticationMethods -ne $null){"Enabled"} else { "Disabled"}}},@{N="MFA Admin Enforced"; E={ if( $_.StrongAuthenticationRequirements.State -ne $null){ $_.StrongAuthenticationRequirements.State} else { "Disabled"}}}
