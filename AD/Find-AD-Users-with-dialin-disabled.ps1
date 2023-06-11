@@ -1,0 +1,1 @@
+Get-ADUser -Filter {(msnpallowdialin -eq $False)} -ResultPageSize 2000 -ResultSetSize $null  -Properties Name, LastLogon | Export-CSV “C:\Temp\DialinDisabledUsers.CSV” –NoTypeInformation
