@@ -1,0 +1,1 @@
+Get-DhcpServerv4Scope | Get-DhcpServerv4Reservation | Export-Csv "c:\temp\dhcp-Reservations.csv" -NoTypeInformation
