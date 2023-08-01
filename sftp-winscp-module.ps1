@@ -1,3 +1,4 @@
+#https://adamtheautomator.com/powershell-sftp/
 #Enter credentials to connect to FTP server.
 $FTPUsername = "UserID"
 $FTPPwd = "UserPwd"
