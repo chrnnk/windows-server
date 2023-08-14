@@ -1,5 +1,5 @@
 @echo off
-
+@ Upload (put) file in remote destination
 "C:\Program Files (x86)\WinSCP\WinSCP.com" ^
   /log="\\SERVER\WinSCP.log" /ini=nul ^
   /command ^
