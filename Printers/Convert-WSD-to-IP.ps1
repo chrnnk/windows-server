@@ -1,0 +1,1 @@
+Get-PrinterPort | ft DeviceURL, Name
